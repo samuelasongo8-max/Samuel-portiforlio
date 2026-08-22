@@ -1,0 +1,722 @@
+/* ===================================================
+   HOME PAGE — aligned to AUVD unified design system
+   Tokens shared with auvd-hero.css: --navy-deep, --orange
+=================================================== */
+.home-page {
+  width: 100%;
+  --navy-deep: #ffffff;      /* page background: white */
+  --navy-soft: #f4f5f7;      /* card/section background: light gray */
+  --orange: #ff6600;
+  --text-h: #000000;         /* headings: black */
+  --text: rgba(0, 0, 0, 0.85); /* body text: near-black */
+  --border: rgba(0, 0, 0, 0.12); /* borders: light gray, was white */
+  --bg: #ffffff;
+  --accent: var(--orange);
+
+  background: var(--navy-deep);
+  color: var(--text);
+  font-family: "Manrope", -apple-system, sans-serif;
+}
+
+.home-page h1,
+.home-page h2,
+.home-page h3 {
+  font-family: "Fraunces", "Manrope", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- shared reveal-on-load pattern ---------- */
+.home-page section > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.home-page section.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page section > * {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---------- Hero Section ---------- */
+.hero-section {
+  padding: 100px 6vw 80px;
+  
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+  line-height: 1.05;
+  color: var(--text-h);
+  margin-bottom: 15px;
+}
+
+
+
+.hero-subtitle {
+  font-size: 22px;
+  color: var(--orange);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 15px;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.hero-bio {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hero-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+ 
+  object-fit: cover;
+}
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  width: fit-content;
+  gap: 10px;
+  font-weight: 700;
+  padding: 10px 16px;
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn-auvd {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  width: fit-content;
+  gap: 5px;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--orange);
+  border: none;
+  
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-auvd:hover {
+  background: #e65c00;
+}
+
+.btn-auvd::after {
+  content: "→";
+  font-size: 10px;
+  transition: transform 0.2s ease;
+}
+
+.btn-auvd:hover::after {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .btn-auvd {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 18px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+}
+
+.btn-large {
+  padding: 16px 40px;
+  font-size: 16px;
+}
+
+
+/* ---------- Featured Areas Section ---------- */
+.featured-areas {
+  padding: 80px 6vw;
+  background-color: whitesmoke;
+}
+
+.section-title {    
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.area-card {
+  padding-top: 16px;
+  border-top: 3px solid var(--orange);
+}
+
+.area-icon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.area-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+}
+
+.area-card h3 {
+  font-family: "Oswald", "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  color: var(--text-h);
+  margin: 0 0 16px;
+}
+
+.area-desc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.area-link {
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--orange);
+  text-decoration: none;
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 4px;
+  transition: opacity 0.2s ease;
+}
+
+.area-link:hover {
+  opacity: 0.75;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .areas-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .area-card h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .area-icon {
+    font-size: 32px;
+  }
+
+  .area-card h3 {
+    font-size: 20px;
+  }
+
+  .area-desc {
+    font-size: 15px;
+  }
+}
+
+/* ---------- AUVD Highlight Section ---------- */
+/* Note: does not define or override .btn / .btn-secondary — those stay as you already have them */
+
+.auvd-highlight {
+  width: 100%;
+}
+
+.auvd-highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  min-height: 600px;
+}
+
+.auvd-highlight-image {
+  width: 100%;
+  height: 100%;
+}
+
+.auvd-highlight-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.auvd-highlight-text {
+  padding: 80px 6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(238, 240, 243, 0.6) 0%, #ffffff 60%);
+}
+
+.auvd-highlight-text h2 {
+  font-family: "Oswald", "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.15;
+  color: var(--orange);
+  margin: 0 0 24px;
+}
+
+.auvd-divider {
+  width: 60px;
+  height: 3px;
+  background: var(--orange);
+  margin-bottom: 30px;
+}
+
+.highlight-description {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  max-width: 460px;
+}
+
+.highlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+}
+
+.highlight-list li {
+  padding: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 460px;
+}
+
+/* ---------- AUVD image slideshow ---------- */
+.auvd-slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.auvd-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 1.2s ease, transform 6s ease;
+}
+
+.auvd-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.auvd-slideshow-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+}
+
+.auvd-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.auvd-dot.is-active {
+  background: var(--orange);
+  transform: scale(1.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auvd-slide {
+    transition: opacity 0.3s ease;
+    transform: none !important;
+  }
+}
+
+/* ---------- AUVD Highlight Responsive ---------- */
+@media (max-width: 900px) {
+  .auvd-highlight-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .auvd-highlight-image {
+    height: 420px;
+    width: 100%;
+  }
+  .auvd-highlight-text {
+    padding: 50px 6vw;
+  }
+  .auvd-highlight-text h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auvd-highlight-image {
+    height: 340px;
+  }
+  .auvd-highlight-text h2 {
+    font-size: 24px;
+  }
+  .highlight-description {
+    font-size: 16px;
+  }
+}
+
+/* ---------- Quote Section ---------- */
+.quote-section {
+  padding: 100px 6vw;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  Background-color: #175ce7;
+}
+
+.quote {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.quote-author {
+  font-size: 15px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+/* ---------- Projects Preview ---------- */
+.projects-preview {
+  padding: 80px 6vw;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.project-card {
+  padding: 40px 30px;
+  background: var(--navy-soft);
+  border-radius: 0 !important;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 30px rgba(255, 102, 0, 0.12);
+  transform: translateY(-5px);
+}
+
+.project-image {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--orange);
+}
+
+.project-card h3 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.project-type {
+  font-size: 12px;
+  color: var(--orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+
+.project-card p:last-child {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* ---------- Final CTA Section ---------- */
+.cta-final {
+  padding: 100px 6vw;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(255, 102, 0, 0.05) 100%);
+  text-align: center;
+   Background-color: #175ce7;
+}
+
+.cta-final h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.cta-final p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+   color: white;
+}
+
+/* ===================================================
+   Responsive Design
+=================================================== */
+@media (max-width: 992px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-image img {
+    max-width: 350px;
+  }
+  .areas-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 22px 50px;
+  }
+  .hero-subtitle {
+    font-size: 17px;
+  }
+  .hero-image img {
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  .area-card {
+    padding: 30px;
+  }
+  .featured-areas,
+  .auvd-highlight,
+  .projects-preview {
+    padding: 60px 22px;
+  }
+  .quote-section {
+    padding: 80px 22px;
+  }
+  .quote {
+    font-size: 21px;
+  }
+  .cta-final {
+    padding: 60px 22px;
+  }
+  .cta-final h2 {
+    font-size: 28px;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-cta {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 50px 15px 40px;
+  }
+  .hero-subtitle {
+    font-size: 15px;
+  }
+  .hero-description,
+  .hero-bio {
+    font-size: 14px;
+  }
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .area-card {
+    padding: 20px;
+  }
+  .area-icon {
+    font-size: 32px;
+  }
+  .area-card h3 {
+    font-size: 17px;
+  }
+  .area-card p {
+    font-size: 14px;
+  }
+  .highlight-text h2 {
+    font-size: 26px;
+  }
+  .highlight-description {
+    font-size: 15px;
+  }
+  .quote {
+    font-size: 17px;
+  }
+  .cta-final h2 {
+    font-size: 22px;
+  }
+  .project-image {
+    font-size: 32px;
+  }
+  .project-card h3 {
+    font-size: 15px;
+  }
+}

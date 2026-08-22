@@ -1,0 +1,119 @@
+/* Experience Page Styles */
+
+.experience-page {
+  width: 100%;
+}
+
+.experience-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.experience-hero h1 {
+  font-size: 48px;
+  color: var(--text-h);
+  margin-bottom: 15px;
+}
+
+.experience-hero .subtitle {
+  font-size: 20px;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.experience-list {
+  padding: 80px 20px;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.timeline-marker {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, #c084fc 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.timeline-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px 30px;
+  flex: 1;
+}
+
+.timeline-card h3 {
+  font-size: 20px;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.timeline-period {
+  font-size: 13px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.timeline-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.experience-cta {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+}
+
+.experience-cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.experience-cta p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .experience-hero h1 {
+    font-size: 36px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-marker {
+    margin-bottom: 5px;
+  }
+}

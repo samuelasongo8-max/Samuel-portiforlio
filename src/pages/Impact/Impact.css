@@ -1,0 +1,136 @@
+/* Impact Page Styles */
+
+.impact-page {
+  width: 100%;
+}
+
+.impact-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.impact-hero h1 {
+  font-size: 48px;
+  color: var(--text-h);
+  margin-bottom: 15px;
+}
+
+.impact-hero .subtitle {
+  font-size: 20px;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.impact-metrics,
+.impact-vision,
+.stories-section,
+.programs-overview,
+.impact-cta {
+  padding: 80px 20px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.metric-card,
+.story-card,
+.program-overview {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.metric-number {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.metric-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.stories-grid,
+.programs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.story-quote {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-h);
+  margin-bottom: 12px;
+}
+
+.story-person {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.story-title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.story-impact {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.impact-vision h2,
+.stories-section h2,
+.programs-overview h2,
+.impact-cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.impact-vision p,
+.impact-cta p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .metrics-grid,
+  .stories-grid,
+  .programs-list {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-hero h1 {
+    font-size: 36px;
+  }
+}

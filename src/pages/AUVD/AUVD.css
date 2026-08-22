@@ -1,0 +1,77 @@
+/* AUVD Page Styles */
+
+.auvd-page {
+  width: 100%;
+}
+
+.auvd-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.auvd-hero h1 {
+  font-size: 48px;
+  color: var(--text-h);
+  margin-bottom: 15px;
+}
+
+.auvd-hero .subtitle,
+.auvd-hero .tagline {
+  font-size: 20px;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto 12px;
+}
+
+.auvd-mission,
+.auvd-focus-areas,
+.auvd-values,
+.auvd-get-involved {
+  padding: 80px 20px;
+}
+
+.focus-grid,
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.focus-card,
+.value-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.focus-card h3,
+.value-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--text-h);
+}
+
+.focus-card p,
+.value-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .auvd-hero h1 {
+    font-size: 36px;
+  }
+
+  .focus-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

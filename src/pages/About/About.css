@@ -1,0 +1,412 @@
+/* About Page Styles */
+
+.about-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.about-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Story Section */
+.about-story {
+  padding: 80px 20px;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(170, 59, 255, 0.15);
+  object-fit: cover;
+}
+
+.story-text h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  color: var(--text-h);
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.story-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Section */
+.timeline {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+}
+
+.timeline h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.timeline-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent), transparent);
+  top: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  position: relative;
+  align-items: start;
+}
+
+.timeline-item:nth-child(even) {
+  direction: rtl;
+}
+
+.timeline-item:nth-child(even) > div {
+  direction: ltr;
+}
+
+.timeline-marker {
+  text-align: center;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-marker::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border-radius: 50%;
+  right: -52px;
+  top: 12px;
+  border: 4px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.timeline-item:nth-child(even) .timeline-marker::after {
+  right: auto;
+  left: -52px;
+}
+
+.timeline-content {
+  background: var(--bg);
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 24px rgba(170, 59, 255, 0.1);
+}
+
+.timeline-content h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--text-h);
+}
+
+.timeline-meta {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.timeline-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Values Section */
+.values {
+  padding: 80px 20px;
+}
+
+.values h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  padding: 40px 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.value-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.value-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* CTA Section */
+.about-cta {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(170, 59, 255, 0.05) 100%);
+}
+
+.about-cta h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.about-cta p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .story-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timeline-wrapper::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+  }
+
+  .timeline-item:nth-child(even) {
+    direction: ltr;
+  }
+
+  .timeline-marker::after {
+    right: auto;
+    left: -18px;
+  }
+
+  .timeline-item:nth-child(even) .timeline-marker::after {
+    left: -18px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 36px;
+  }
+
+  .story-text h2 {
+    font-size: 28px;
+  }
+
+  .timeline h2,
+  .values h2 {
+    font-size: 32px;
+  }
+
+  .timeline-wrapper::before {
+    left: 0;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-marker {
+    font-size: 32px;
+  }
+
+  .timeline-marker::after {
+    width: 12px;
+    height: 12px;
+    right: auto;
+    left: -4px;
+    top: 8px;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-cta {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 50px 15px;
+  }
+
+  .about-hero h1 {
+    font-size: 26px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .story-image img {
+    max-width: 100%;
+  }
+
+  .story-text h2 {
+    font-size: 22px;
+  }
+
+  .story-text p {
+    font-size: 14px;
+  }
+
+  .timeline {
+    padding: 60px 15px;
+  }
+
+  .timeline-item {
+    margin-bottom: 25px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+  }
+
+  .timeline-content h3 {
+    font-size: 18px;
+  }
+
+  .value-card {
+    padding: 25px 20px;
+  }
+
+  .value-card h3 {
+    font-size: 18px;
+  }
+
+  .value-card p {
+    font-size: 14px;
+  }
+
+  .about-cta h2 {
+    font-size: 24px;
+  }
+
+  .about-cta p {
+    font-size: 15px;
+  }
+}

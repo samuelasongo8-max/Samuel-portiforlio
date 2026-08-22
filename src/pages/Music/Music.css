@@ -1,0 +1,423 @@
+/* Music Page Styles */
+
+.music-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.music-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.music-hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.music-hero .subtitle {
+  font-size: 20px;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Stats Section */
+.music-stats {
+  padding: 60px 20px;
+  background: var(--bg);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.1) 0%, rgba(192, 132, 252, 0.05) 100%);
+  border: 1px solid rgba(170, 59, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(170, 59, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Mission Section */
+.mission {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+}
+
+.mission h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text-h);
+}
+
+.mission p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.mission p:last-child {
+  margin-bottom: 0;
+}
+
+/* Programs Section */
+.programs {
+  padding: 80px 20px;
+}
+
+.programs h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  padding: 35px 25px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.program-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.program-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.program-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Instruments Section */
+.instruments {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+}
+
+.instruments h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.instruments-intro {
+  text-align: center;
+  font-size: 16px;
+  color: var(--text);
+  opacity: 0.85;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instruments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.instrument-item {
+  padding: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.instrument-item:hover {
+  border-color: var(--accent);
+  background: rgba(170, 59, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Philosophy Section */
+.philosophy {
+  padding: 80px 20px;
+}
+
+.philosophy h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.philosophy-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.philosophy-card {
+  padding: 35px 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.philosophy-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.philosophy-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Partnerships Section */
+.partnerships {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+}
+
+.partnerships h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--text-h);
+}
+
+.partnerships p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 15px;
+  opacity: 0.85;
+}
+
+.partnerships p:last-child {
+  margin-bottom: 0;
+}
+
+/* Enrollment CTA */
+.enrollment-cta {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(170, 59, 255, 0.05) 100%);
+}
+
+.enrollment-cta h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.enrollment-cta p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.enrollment-cta p:last-child {
+  margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instruments-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .philosophy-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .music-hero h1 {
+    font-size: 36px;
+  }
+
+  .programs h2,
+  .instruments h2,
+  .philosophy h2 {
+    font-size: 32px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .stat-card {
+    padding: 30px 15px;
+  }
+
+  .stat-number {
+    font-size: 32px;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .instruments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .enrollment-cta {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-hero {
+    padding: 50px 15px;
+  }
+
+  .music-hero h1 {
+    font-size: 28px;
+  }
+
+  .music-hero .subtitle {
+    font-size: 16px;
+  }
+
+  .music-stats {
+    padding: 40px 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 25px;
+  }
+
+  .stat-number {
+    font-size: 28px;
+  }
+
+  .mission h2 {
+    font-size: 26px;
+  }
+
+  .program-card {
+    padding: 20px;
+  }
+
+  .program-card h3 {
+    font-size: 16px;
+  }
+
+  .instruments {
+    padding: 60px 15px;
+  }
+
+  .instruments h2 {
+    font-size: 26px;
+  }
+
+  .instruments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy {
+    padding: 60px 15px;
+  }
+
+  .philosophy h2 {
+    font-size: 26px;
+  }
+
+  .philosophy-card {
+    padding: 20px;
+  }
+
+  .enrollment-cta {
+    padding: 60px 15px;
+  }
+
+  .enrollment-cta h2 {
+    font-size: 26px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

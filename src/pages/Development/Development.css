@@ -1,0 +1,368 @@
+/* Development Page Styles */
+
+.development-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.development-hero {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.development-hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.development-hero .subtitle {
+  font-size: 20px;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Intro Section */
+.dev-intro {
+  padding: 80px 20px;
+}
+
+.dev-intro h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text-h);
+}
+
+.dev-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.dev-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tech Stack Section */
+.tech-stack {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+}
+
+.tech-stack h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-category {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 35px;
+  transition: all 0.3s ease;
+}
+
+.tech-category:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.tech-category h3 {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: var(--text-h);
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--border);
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tech-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.tech-name {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.tech-level {
+  font-size: 13px;
+  color: var(--accent);
+}
+
+/* Principles Section */
+.principles {
+  padding: 80px 20px;
+}
+
+.principles h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.principle-card {
+  padding: 35px 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.principle-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.principle-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--text-h);
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.service-item {
+  padding: 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  border-color: var(--accent);
+  background: rgba(170, 59, 255, 0.02);
+  transform: translateY(-3px);
+}
+
+.service-item h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text-h);
+}
+
+.service-item p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* CTA Section */
+.dev-cta {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(170, 59, 255, 0.05) 100%);
+}
+
+.dev-cta h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.dev-cta p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tech-categories {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .development-hero h1 {
+    font-size: 36px;
+  }
+
+  .dev-intro h2,
+  .tech-stack h2,
+  .principles h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .tech-category {
+    padding: 25px;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dev-cta {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .development-hero {
+    padding: 50px 15px;
+  }
+
+  .development-hero h1 {
+    font-size: 28px;
+  }
+
+  .development-hero .subtitle {
+    font-size: 16px;
+  }
+
+  .dev-intro {
+    padding: 60px 15px;
+  }
+
+  .dev-intro h2 {
+    font-size: 26px;
+  }
+
+  .dev-intro p {
+    font-size: 14px;
+  }
+
+  .tech-stack {
+    padding: 60px 15px;
+  }
+
+  .tech-stack h2 {
+    font-size: 26px;
+  }
+
+  .tech-category {
+    padding: 20px;
+  }
+
+  .tech-category h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .tech-name {
+    font-size: 14px;
+  }
+
+  .tech-level {
+    font-size: 12px;
+  }
+
+  .principles h2 {
+    font-size: 26px;
+  }
+
+  .principle-card {
+    padding: 20px;
+  }
+
+  .principle-card h3 {
+    font-size: 16px;
+  }
+
+  .principle-card p {
+    font-size: 13px;
+  }
+
+  .services h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .service-item {
+    padding: 20px;
+  }
+
+  .service-item h3 {
+    font-size: 16px;
+  }
+
+  .dev-cta {
+    padding: 60px 15px;
+  }
+
+  .dev-cta h2 {
+    font-size: 26px;
+  }
+
+  .dev-cta p {
+    font-size: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
