@@ -3,7 +3,7 @@
  * Helps manage meta tags and structured data for each page
  */
 
-export const setPageMeta = (title, description, keywords, image = '/images/profile/samuel-portrait.png', path = '/') => {
+export const setPageMeta = (title, description, keywords, image = '/Samuel Asongo image.png', path = '/') => {
   const siteUrl = import.meta.env.VITE_SITE_URL || 'https://www.refugepoint.org';
   const canonicalUrl = `${siteUrl}${path === '/' ? '' : path}`;
 
@@ -86,7 +86,7 @@ export const getPersonSchema = () => {
       'Full-Stack Web Developer',
       'Social Impact Leader'
     ],
-    image: '/images/profile/samuel-portrait.png',
+    image: '/Samuel Asongo image.png',
     sameAs: [
       'https://www.linkedin.com/in/samuel-asongo',
       'https://www.instagram.com/samuel.asongo',
@@ -116,7 +116,7 @@ export const getOrganizationSchema = () => {
     name: 'Art and Unity for Vulnerable Development',
     alternateName: 'AUVD',
     url: 'https://www.auvd.org',
-    logo: '/images/profile/samuel-portrait.png',
+    logo: '/Samuel Asongo image.png',
     description: 'Creating through art. Educating through music. Building through technology.',
     founder: 'Samuel Asongo',
     location: {

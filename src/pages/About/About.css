@@ -1,5 +1,7 @@
 /* About Page Styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&family=Quicksand:wght@500;600&display=swap');
+
 .about-page {
   width: 100%;
 }
@@ -10,18 +12,53 @@
   background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
   border-bottom: 1px solid var(--border);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.auvd-journey-background {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.auvd-journey-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(19, 11, 11, 0.61);
+}
+
+.auvd-journey-background-one {
+  background-image: url('/Kakuma Artist.jpg');
+}
+
+.auvd-journey-background-two {
+  background-image: url('/Kakuma Artist2.jpg');
+}
+
+.auvd-journey-background-active {
+  opacity: 1;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .about-hero h1 {
   font-size: 48px;
   margin-bottom: 20px;
-  color: var(--text-h);
+  color: white;
 }
 
 .hero-subtitle {
   font-size: 20px;
-  color: var(--text);
-  opacity: 0.85;
+  color: white;
+  font-weight: 600;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -50,7 +87,6 @@
   width: 100%;
   max-width: 350px;
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(170, 59, 255, 0.15);
   object-fit: cover;
 }
 
@@ -61,6 +97,8 @@
 }
 
 .story-text p {
+  font-family: 'Baloo 2', 'Quicksand', -apple-system, sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.8;
   color: var(--text);
@@ -70,12 +108,6 @@
 
 .story-text p:last-child {
   margin-bottom: 0;
-}
-
-/* Timeline Section */
-.timeline {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
 }
 
 .timeline h2 {
@@ -120,11 +152,6 @@
 }
 
 .timeline-marker {
-  text-align: center;
-  font-size: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 1;
 }
@@ -135,9 +162,8 @@
   width: 16px;
   height: 16px;
   background: var(--accent);
-  border-radius: 50%;
   right: -52px;
-  top: 12px;
+  top: 0;
   border: 4px solid var(--bg);
   box-shadow: 0 0 0 2px var(--accent);
 }
@@ -151,13 +177,11 @@
   background: var(--bg);
   padding: 30px;
   border: 1px solid var(--border);
-  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .timeline-content:hover {
   border-color: var(--accent);
-  box-shadow: 0 8px 24px rgba(170, 59, 255, 0.1);
 }
 
 .timeline-content h3 {
@@ -181,10 +205,10 @@
   color: var(--text);
   opacity: 0.85;
 }
-
 /* Values Section */
 .values {
   padding: 80px 20px;
+  background-color: rgba(3, 27, 78, 0.075);
 }
 
 .values h2 {
@@ -192,6 +216,7 @@
   text-align: center;
   margin-bottom: 60px;
   color: var(--text-h);
+  color: rgb(7, 73, 172);
 }
 
 .values-grid {
@@ -206,14 +231,12 @@
   padding: 40px 30px;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .value-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
   transform: translateY(-5px);
 }
 
@@ -233,13 +256,14 @@
 /* CTA Section */
 .about-cta {
   padding: 100px 20px;
-  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(170, 59, 255, 0.05) 100%);
+  background-color:rgb(8, 70, 151)
+
 }
 
 .about-cta h2 {
   font-size: 40px;
   margin-bottom: 15px;
-  color: var(--text-h);
+  color:  white;
 }
 
 .about-cta p {
@@ -247,14 +271,10 @@
   line-height: 1.7;
   margin-bottom: 40px;
   opacity: 0.9;
+  color: white;
 }
 
-.cta-buttons {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -410,3 +430,4 @@
     font-size: 15px;
   }
 }
+

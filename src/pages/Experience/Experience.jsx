@@ -9,7 +9,7 @@ export default function Experience() {
       'Samuel Asongo | Experience & Leadership',
       'Review Samuel Asongo’s experience across art, music education, web development, leadership, and community-centered social impact work.',
       'Samuel Asongo experience, leadership, artist, music educator, full-stack developer, AUVD CEO',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/experience'
     );
   }, []);
@@ -17,7 +17,7 @@ export default function Experience() {
   const roles = [
     {
       title: 'CEO & Founder, AUVD',
-      period: '2020 - Present',
+      period: '2025 - Present',
       description: 'Leads a multidisciplinary nonprofit focused on arts, music, youth development, and community empowerment.'
     },
     {
@@ -27,17 +27,17 @@ export default function Experience() {
     },
     {
       title: 'Music Educator & Conductor',
-      period: '2015 - Present',
+      period: '2025 - Present',
       description: 'Develops and delivers music education programs serving more than 150 students.'
     },
     {
       title: 'Full-Stack Web Developer',
-      period: '2018 - Present',
+      period: '2026 - Present',
       description: 'Builds responsive, accessible web applications for education and community-oriented initiatives.'
     },
     {
       title: 'TSF Ambassador',
-      period: '2022 - Present',
+      period: '2024 - Present',
       description: 'Represents the Transylvanian Symphony Foundation and supports music education outreach.'
     }
   ];
@@ -56,7 +56,7 @@ export default function Experience() {
           <div className="timeline">
             {roles.map((role, index) => (
               <div key={index} className="timeline-item">
-                <div className="timeline-marker">{index + 1}</div>
+        
                 <div className="timeline-card">
                   <h3>{role.title}</h3>
                   <p className="timeline-period">{role.period}</p>
@@ -72,7 +72,7 @@ export default function Experience() {
         <div className="container-sm text-center">
           <h2>Interested in Working Together?</h2>
           <p>I am open to meaningful collaborations across art, education, technology, and social impact.</p>
-          <Link to="/contact" className="btn">Start a Conversation</Link>
+          <Link to="/contact"  className="btn-auvd">Start a Conversation</Link>
         </div>
       </section>
     </div>

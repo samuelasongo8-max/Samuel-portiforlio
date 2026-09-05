@@ -28,7 +28,7 @@ export default function Home() {
       'Samuel Asongo | Artist, Music Educator & Full-Stack Web Developer',
       'Samuel Asongo is an artist, music educator, full-stack web developer, CEO of AUVD, and social impact leader based in Kakuma Refugee Camp, Kenya.',
       'Samuel Asongo, Samuel Asongo Kenya, Samuel Asongo Kakuma, Samuel Asongo AUVD, Samuel Asongo Artist, Samuel Asongo Music Educator, Samuel Asongo Full-Stack Web Developer, Samuel Asongo CEO',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/'
     );
     addStructuredData(getPersonSchema());
@@ -103,7 +103,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-image">
-              <OptimizedImage src="/images/profile/samuel-portrait.png" alt="Samuel Asongo portrait as an artist, educator, and developer" width="720" height="900" priority />
+              <OptimizedImage src="/Samuel Asongo image.png" alt="Samuel Asongo portrait as an artist, educator, and developer" width="720" height="900" priority />
             </div>
           </div>
         </div>

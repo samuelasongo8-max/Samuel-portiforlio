@@ -6,23 +6,42 @@
 
 .ambassador-hero {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  min-height: 680px;
+  background-image: url('/samuel transylvanina Ambasodor.PNG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.ambassador-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 8, 18, 0.58);
+}
+
+.ambassador-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .ambassador-hero h1 {
   font-size: 48px;
-  color: var(--text-h);
+  color: #ffffff;
   margin-bottom: 15px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .ambassador-hero .subtitle {
   font-size: 20px;
-  color: var(--text);
-  opacity: 0.85;
+  color: #ffffff;
   max-width: 700px;
   margin: 0 auto;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .ambassador-intro,
@@ -61,13 +80,11 @@
   padding: 35px 25px;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .focus-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
   transform: translateY(-5px);
 }
 
@@ -84,7 +101,50 @@
   opacity: 0.85;
 }
 
+/* Action button — always visible, no hover/focus/active changes,
+   sized to content (not full-width) */
+.ambassador-cta .btn-auvd {
+  display: inline-block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--accent) !important;
+  width: auto;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.ambassador-cta .btn-auvd:hover,
+.ambassador-cta .btn-auvd:focus,
+.ambassador-cta .btn-auvd:active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 1024px) {
+  .ambassador-hero {
+    min-height: 600px;
+    background-position: center 15%;
+  }
+}
+
 @media (max-width: 768px) {
+  .ambassador-hero {
+    min-height: 520px;
+    background-position: center top;
+  }
+
   .ambassador-hero h1 {
     font-size: 36px;
   }

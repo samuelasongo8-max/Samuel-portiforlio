@@ -9,7 +9,7 @@ export default function Stories() {
       'Samuel Asongo | Stories & Ideas',
       'Read stories and reflections from Samuel Asongo about music, art, technology, and community transformation.',
       'Samuel Asongo stories, Samuel Asongo blog, community development stories, art and music stories',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/stories'
     );
   }, []);

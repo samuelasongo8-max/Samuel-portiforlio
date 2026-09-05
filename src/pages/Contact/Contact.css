@@ -6,23 +6,47 @@
 
 .contact-hero {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  min-height: 680px;
+  background-image: url('/Samuel Asongo image.png');
+  background-size: cover;
+  background-position: center 38%;
   text-align: center;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 8, 18, 0.58);
+}
+
+.contact-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-hero h1 {
   font-size: 48px;
-  color: var(--text-h);
+  color: #ffffff;
   margin-bottom: 15px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .contact-hero .subtitle {
   font-size: 20px;
-  color: var(--text);
-  opacity: 0.85;
+  color: #ffffff;
   max-width: 700px;
   margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .contact-hero {
+    min-height: 600px;
+    background-position: center 30%;
+  }
 }
 
 .contact-content {
@@ -41,7 +65,6 @@
 .contact-info {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 16px;
   padding: 35px;
 }
 
@@ -66,7 +89,6 @@
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--border);
-  border-radius: 8px;
   background: transparent;
   color: var(--text);
   font: inherit;
@@ -76,6 +98,48 @@
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Submit button — always visible, flat, no hover/focus/active changes,
+   sized to content (not full-width) regardless of any global 
+   .btn-auvd hover-reveal styling elsewhere in the project */
+.contact-form .btn-auvd {
+  display: inline-block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--accent) !important;
+  width: auto;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.contact-form .btn-auvd:hover,
+.contact-form .btn-auvd:focus,
+.contact-form .btn-auvd:active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.contact-form .btn-auvd:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed;
 }
 
 .success-message {
@@ -106,6 +170,11 @@
 }
 
 @media (max-width: 768px) {
+  .contact-hero {
+    min-height: 520px;
+    background-position: center 22%;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }

@@ -7,23 +7,42 @@
 /* Hero Section */
 .creative-hero {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  min-height: 680px;
+  background-image: url('/creative Arts.jpg');
+  background-size: cover;
+  background-position: center 38%;
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.creative-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 8, 18, 0.58);
+}
+
+.creative-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .creative-hero h1 {
   font-size: 48px;
   margin-bottom: 15px;
-  color: var(--text-h);
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
 }
 
 .creative-hero .subtitle {
   font-size: 20px;
-  color: var(--text);
-  opacity: 0.85;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Artist Statement */
@@ -53,7 +72,6 @@
 /* Gallery Section */
 .gallery {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
 }
 
 .gallery h2 {
@@ -81,14 +99,11 @@
 
 .gallery-item:hover {
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
   transform: translateY(-5px);
 }
 
 .artwork-placeholder {
   width: 100%;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.1) 0%, rgba(192, 132, 252, 0.05) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,7 +167,6 @@
 
 .technique-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
   transform: translateY(-5px);
 }
 
@@ -172,7 +186,6 @@
 /* Exhibitions Section */
 .exhibitions {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
 }
 
 .exhibitions h2 {
@@ -212,7 +225,6 @@
 /* Commissions Section */
 .commissions {
   padding: 100px 20px;
-  background: linear-gradient(135deg, var(--accent-bg) 0%, rgba(170, 59, 255, 0.05) 100%);
 }
 
 .commissions h2 {
@@ -234,6 +246,11 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .creative-hero {
+    min-height: 600px;
+    background-position: center 30%;
+  }
+
   .gallery-grid,
   .techniques-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -241,6 +258,11 @@
 }
 
 @media (max-width: 768px) {
+  .creative-hero {
+    min-height: 520px;
+    background-position: center 22%;
+  }
+
   .creative-hero h1 {
     font-size: 36px;
   }
@@ -270,6 +292,8 @@
 @media (max-width: 480px) {
   .creative-hero {
     padding: 50px 15px;
+    min-height: 480px;
+    background-position: center top;
   }
 
   .creative-hero h1 {
@@ -311,8 +335,35 @@
   .commissions h2 {
     font-size: 24px;
   }
+}
 
-  .btn {
-    width: 100%;
-  }
+/* Add this at the end of the file */
+
+/* Submit/action button — always visible, no hover/focus/active changes */
+.commissions .btn-auvd {
+  display: inline-block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--accent) !important;
+  width: auto;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.commissions .btn-auvd:hover,
+.commissions .btn-auvd:focus,
+.commissions .btn-auvd:active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }

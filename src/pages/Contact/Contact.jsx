@@ -12,7 +12,7 @@ export default function Contact() {
       'Contact Samuel Asongo | Collaboration & Opportunities',
       'Get in touch with Samuel Asongo for collaborations, commissions, music education partnerships, development projects, or social impact work.',
       'contact Samuel Asongo, Samuel Asongo collaboration, Samuel Asongo commissions, Samuel Asongo music education',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/contact'
     );
   }, []);
@@ -26,7 +26,7 @@ export default function Contact() {
     setSubmitted(true);
   };
 
-  return (
+  return (    
     <div className="contact-page">
       <section className="contact-hero">
         <div className="container">
@@ -51,19 +51,18 @@ export default function Contact() {
               Message
               <textarea name="message" value={formData.message} onChange={handleChange} rows="6" required />
             </label>
-            <button type="submit" className="btn">Send Message</button>
+            <button type="submit" className="btn-auvd">Send Message</button>
             {submitted && <p className="success-message">Thanks! Your message has been received. I’ll be in touch soon.</p>}
           </form>
 
           <div className="contact-info">
             <h2>Get In Touch</h2>
-            <p><strong>Email:</strong> samuel@auvd.org</p>
+            <p><strong>Email:</strong> samuelasongoinfoo@gmail.com</p>
             <p><strong>Location:</strong> Kakuma Refugee Camp, Kenya</p>
             <p><strong>Response Time:</strong> Usually within 2–3 business days</p>
             <div className="contact-links">
-              <a href="https://www.linkedin.com/in/samuel-asongo" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://www.instagram.com/samuel.asongo" target="_blank" rel="noopener noreferrer">Instagram</a>
-              <a href="https://github.com/samuelasongo" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/posts/samuel-asongo-46470a41a_my-story-why-i-started-auvd-message-from-activity-7477250528704499712-A-T2?utm_source=share&utm_medium=member_android&rcm=ACoAAGqJOgwBXsCwJjQJGYZ_PoDhEO0v8svCKq4 " target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com/samuelasongo8-max/Samuel-portiforlio" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
             <Link to="/about" className="text-link">Learn more about my work</Link>
           </div>

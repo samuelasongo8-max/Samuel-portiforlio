@@ -9,7 +9,7 @@ export default function Impact() {
       'Samuel Asongo | Social Impact & Community Development',
       'Read about Samuel Asongo’s social impact work and the community transformation stories behind AUVD and its programs in Kakuma Refugee Camp.',
       'Samuel Asongo impact, community development, social impact, Kakuma, AUVD, refugee community',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/impact'
     );
   }, []);

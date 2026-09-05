@@ -1,5 +1,7 @@
 /* Stories Page Styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600&family=Quicksand:wght@500;600&display=swap');
+
 .stories-page {
   width: 100%;
 }
@@ -18,6 +20,8 @@
 }
 
 .stories-hero .subtitle {
+  font-family: 'Baloo 2', 'Quicksand', -apple-system, sans-serif;
+  font-weight: 500;
   font-size: 20px;
   color: var(--text);
   opacity: 0.85;
@@ -67,6 +71,8 @@
 }
 
 .story-card p {
+  font-family: 'Baloo 2', 'Quicksand', -apple-system, sans-serif;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.7;
   color: var(--text);
@@ -91,6 +97,8 @@
 }
 
 .stories-cta p {
+  font-family: 'Baloo 2', 'Quicksand', -apple-system, sans-serif;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.8;
   color: var(--text);

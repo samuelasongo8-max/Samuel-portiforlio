@@ -1,25 +1,43 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import OptimizedImage from '../../components/OptimizedImage';
 import { setPageMeta, addStructuredData, getPersonSchema } from '../../utils/seo';
 import './About.css';
 
 export default function About() {
+  const [journeyBackground, setJourneyBackground] = useState(0);
+
   useEffect(() => {
     setPageMeta(
       'About Samuel Asongo | Artist, Educator & Developer',
       'Learn about Samuel Asongo’s background as an artist, educator, developer, and community leader working in Kakuma Refugee Camp, Kenya.',
       'About Samuel Asongo, Samuel Asongo biography, Samuel Asongo Kenya, Kakuma refugee camp, AUVD',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/about'
     );
     addStructuredData(getPersonSchema());
+  }, []);
+
+  useEffect(() => {
+    const backgroundInterval = setInterval(() => {
+      setJourneyBackground((currentBackground) => (currentBackground === 0 ? 1 : 0));
+    }, 5000);
+
+    return () => clearInterval(backgroundInterval);
   }, []);
 
   return (
     <div className="about-page">
       {/* Hero Section */}
       <section className="about-hero">
+        <div
+          className={`auvd-journey-background auvd-journey-background-one${journeyBackground === 0 ? ' auvd-journey-background-active' : ''}`}
+          aria-hidden="true"
+        />
+        <div
+          className={`auvd-journey-background auvd-journey-background-two${journeyBackground === 1 ? ' auvd-journey-background-active' : ''}`}
+          aria-hidden="true"
+        />
         <div className="container">
           <h1>My Journey</h1>
           <p className="hero-subtitle">
@@ -33,7 +51,7 @@ export default function About() {
         <div className="container">
           <div className="story-content">
             <div className="story-image">
-              <OptimizedImage src="/Samuel Asongo.png" alt="Samuel Asongo in a professional portrait" width="640" height="800" />
+              <OptimizedImage src="/Samuel Asongo image.png" alt="Samuel Asongo in a professional portrait" width="640" height="800" />
             </div>
             <div className="story-text">
               <h2>Who Am I?</h2>
@@ -60,7 +78,7 @@ export default function About() {
           <h2>Professional Journey</h2>
           <div className="timeline-wrapper">
             <div className="timeline-item">
-              <div className="timeline-marker">👨‍🎨</div>
+             
               <div className="timeline-content">
                 <h3>Artist & Visual Creator</h3>
                 <p className="timeline-meta">Ongoing</p>
@@ -71,7 +89,7 @@ export default function About() {
             </div>
 
             <div className="timeline-item">
-              <div className="timeline-marker">🎵</div>
+           
               <div className="timeline-content">
                 <h3>Music Educator & Conductor</h3>
                 <p className="timeline-meta">2015 - Present</p>
@@ -82,7 +100,7 @@ export default function About() {
             </div>
 
             <div className="timeline-item">
-              <div className="timeline-marker">💻</div>
+            
               <div className="timeline-content">
                 <h3>Full-Stack Web Developer</h3>
                 <p className="timeline-meta">2018 - Present</p>
@@ -93,18 +111,18 @@ export default function About() {
             </div>
 
             <div className="timeline-item">
-              <div className="timeline-marker">🌍</div>
+            
               <div className="timeline-content">
                 <h3>CEO & Founder, AUVD</h3>
                 <p className="timeline-meta">2020 - Present</p>
                 <p>
                   Founded Art and Unity for Vulnerable Development to scale impact across Kakuma Refugee Camp. AUVD integrates arts, music, youth development, and technology to create sustainable community transformation.
-                </p>
-              </div>
-            </div>
+                </p> 
+            </div>                   
+            </div>                   
 
             <div className="timeline-item">
-              <div className="timeline-marker">🎼</div>
+              
               <div className="timeline-content">
                 <h3>Transylvanian Symphony Foundation Ambassador</h3>
                 <p className="timeline-meta">2022 - Present</p>
@@ -123,37 +141,37 @@ export default function About() {
           <h2>Core Values</h2>
           <div className="values-grid">
             <div className="value-card">
-              <h3>🎨 Creativity</h3>
+              <h3>Creativity</h3>
               <p>
                 I believe creative expression is fundamental to human dignity and social transformation.
               </p>
             </div>
             <div className="value-card">
-              <h3>🤝 Community</h3>
+              <h3>Community</h3>
               <p>
                 True change happens together. I'm committed to community-centered, participatory approaches.
               </p>
             </div>
             <div className="value-card">
-              <h3>♿ Accessibility</h3>
+              <h3>Accessibility</h3>
               <p>
                 Quality education and creative opportunities should be available to all, regardless of circumstances.
               </p>
             </div>
             <div className="value-card">
-              <h3>🚀 Innovation</h3>
+              <h3>Innovation</h3>
               <p>
                 I embrace technology and modern approaches to reach more people and create sustainable impact.
               </p>
             </div>
             <div className="value-card">
-              <h3>🌱 Sustainability</h3>
+              <h3>Sustainability</h3>
               <p>
                 Building systems and capacities that endure, creating lasting change within communities.
               </p>
             </div>
             <div className="value-card">
-              <h3>✨ Excellence</h3>
+              <h3>Excellence</h3>
               <p>
                 I strive for excellence in everything I do, serving as a model of what's possible.
               </p>
@@ -170,12 +188,13 @@ export default function About() {
             Whether you're interested in collaboration, partnership, commissioning work, or simply connecting around shared values, I'm always open to meaningful conversations.
           </p>
           <div className="cta-buttons">
-            <Link to="/projects" className="btn">
+            <Link to="/projects"  className="btn-auvd">
               See My Work
             </Link>
-            <Link to="/contact" className="btn btn-secondary">
+            <Link to="/contact" className="btn-auvd">
               Start a Conversation
             </Link>
+            
           </div>
         </div>
       </section>

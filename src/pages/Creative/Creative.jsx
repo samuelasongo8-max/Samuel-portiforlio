@@ -8,7 +8,7 @@ export default function Creative() {
       'Samuel Asongo | Creative Arts & Artistic Work',
       'Explore Samuel Asongo’s creative arts practice through painting, drawing, mixed media, and community-centered visual storytelling.',
       'Samuel Asongo artist, creative arts, visual art, painting, drawing, contemporary art, Samuel Asongo creative work',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/creative'
     );
   }, []);
@@ -84,11 +84,12 @@ export default function Creative() {
       <section className="gallery">
         <div className="container">
           <h2>Gallery</h2>
+          <p>This gallery is just the beginning. New pieces from these series will be added as they're completed — check back soon.</p>
           <div className="gallery-grid">
             {artworks.map((artwork) => (
               <div key={artwork.id} className="gallery-item">
                 <div className="artwork-placeholder">
-                  <span>🎨</span>
+                  <span></span>
                 </div>
                 <div className="artwork-info">
                   <h3>{artwork.title}</h3>
@@ -107,27 +108,27 @@ export default function Creative() {
           <h2>Mediums & Techniques</h2>
           <div className="techniques-grid">
             <div className="technique-card">
-              <h3>🎨 Painting</h3>
+              <h3> Painting</h3>
               <p>Acrylic, oil, and watercolor techniques exploring color, texture, and composition.</p>
             </div>
             <div className="technique-card">
-              <h3>✏️ Drawing</h3>
+              <h3> Drawing</h3>
               <p>Pencil, charcoal, and mixed media drawing exploring line, form, and narrative.</p>
             </div>
             <div className="technique-card">
-              <h3>🖼️ Mixed Media</h3>
+              <h3>Mixed Media</h3>
               <p>Combining multiple materials and techniques to create layered, complex compositions.</p>
             </div>
             <div className="technique-card">
-              <h3>📦 Installation</h3>
+              <h3> Installation</h3>
               <p>Interactive installations creating immersive experiences around social themes.</p>
             </div>
             <div className="technique-card">
-              <h3>🤝 Collaborative</h3>
+              <h3>Collaborative</h3>
               <p>Community-engaged projects where participants contribute to the artwork.</p>
             </div>
             <div className="technique-card">
-              <h3>🎭 Performance</h3>
+              <h3>Performance</h3>
               <p>Performance art integrating visual art with movement and live audience engagement.</p>
             </div>
           </div>
@@ -166,7 +167,7 @@ export default function Creative() {
           <p>
             For commission inquiries, project details, and pricing information, please reach out through the contact page.
           </p>
-          <a href="/contact" className="btn">
+          <a href="/contact"  className="btn-auvd">
             Inquire About Commission
           </a>
         </div>

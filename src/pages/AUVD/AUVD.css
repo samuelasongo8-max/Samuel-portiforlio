@@ -6,21 +6,63 @@
 
 .auvd-hero {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
   text-align: center;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.auvd-hero-background {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.auvd-hero-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 8, 18, 0.58);
+}
+
+.auvd-hero-background-one {
+  background-image: url('/AUVD student1.jpg');
+  background-image: image-set(
+    url('/AUVD student1.webp') type('image/webp'),
+    url('/AUVD student1.jpg') type('image/jpeg')
+  );
+}
+
+.auvd-hero-background-two {
+  background-image: url('/AUVD student2.jpg');
+  background-image: image-set(
+    url('/AUVD student2.webp') type('image/webp'),
+    url('/AUVD student2.jpg') type('image/jpeg')
+  );
+}
+
+.auvd-hero-background-active {
+  opacity: 1;
+}
+
+.auvd-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .auvd-hero h1 {
   font-size: 48px;
-  color: var(--text-h);
+  color: #ffffff;
   margin-bottom: 15px;
 }
 
 .auvd-hero .subtitle,
 .auvd-hero .tagline {
   font-size: 20px;
-  color: var(--text);
+  color: #ffffff;
   opacity: 0.85;
   max-width: 700px;
   margin: 0 auto 12px;
@@ -46,7 +88,6 @@
 .value-card {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
   padding: 25px;
 }
 
@@ -63,6 +104,37 @@
   line-height: 1.7;
   color: var(--text);
   opacity: 0.85;
+}
+
+/* Action button — always visible, no hover/focus/active changes,
+   sized to content (not full-width) */
+.auvd-get-involved .btn-auvd {
+  display: inline-block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--accent) !important;
+  width: auto;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.auvd-get-involved .btn-auvd:hover,
+.auvd-get-involved .btn-auvd:focus,
+.auvd-get-involved .btn-auvd:active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 @media (max-width: 768px) {

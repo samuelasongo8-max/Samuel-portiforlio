@@ -17,11 +17,7 @@ export default function Ambassador() {
 
   return (
     <div className="ambassador-page">
-      <section className="ambassador-hero-image">
-        <div className="container">
-          <OptimizedImage src="/Samuel as an Ambasodor at Trasylvanian Symphony Foundation.jpg" alt="Samuel Asongo serving as an ambassador for the Transylvanian Symphony Foundation" width="1200" height="700" />
-        </div>
-      </section>
+    
       <section className="ambassador-hero">
         <div className="container">
           <h1>TSF Ambassador</h1>
@@ -46,15 +42,15 @@ export default function Ambassador() {
           <h2>Key Responsibilities</h2>
           <div className="focus-grid">
             <div className="focus-card">
-              <h3>🎼 Music Outreach</h3>
+              <h3>Music Outreach</h3>
               <p>Connecting students to performance opportunities and classical music education.</p>
             </div>
             <div className="focus-card">
-              <h3>🌍 Cultural Exchange</h3>
+              <h3> Cultural Exchange</h3>
               <p>Bridging local and international artistic communities through shared experience.</p>
             </div>
             <div className="focus-card">
-              <h3>👥 Community Development</h3>
+              <h3>Community Development</h3>
               <p>Supporting community building through concerts, workshops, and educational events.</p>
             </div>
           </div>
@@ -65,7 +61,7 @@ export default function Ambassador() {
         <div className="container-sm text-center">
           <h2>Collaborate With Me</h2>
           <p>If you are interested in music education partnerships or community arts engagement, I would be happy to connect.</p>
-          <Link to="/contact" className="btn">Get In Touch</Link>
+          <Link to="/contact"  className="btn-auvd">Get In Touch</Link>
         </div>
       </section>
     </div>

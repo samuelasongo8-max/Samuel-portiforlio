@@ -10,7 +10,7 @@ export default function Projects() {
       'Samuel Asongo | Projects & Digital Work',
       'Explore Samuel Asongo’s portfolio of creative, educational, and technology projects spanning art, music, digital development, and social impact.',
       'Samuel Asongo projects, portfolio, creative projects, digital work, Samuel Asongo development projects',
-      '/Samuel Asongo.png',
+      '/Samuel Asongo image.png',
       '/projects'
     );
   }, []);
