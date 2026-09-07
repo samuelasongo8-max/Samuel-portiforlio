@@ -26,7 +26,7 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo" onClick={closeMenu}>
-          <span className="logo-text">SA</span> <span className="nav-tagline">Create. Educate. Empower.</span>
+           <span className="nav-tagline">Create. Educate. Empower.</span>
         </Link>
 
         <div className="hamburger" onClick={toggleMenu}>

@@ -6,26 +6,46 @@
 
 .impact-hero {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
+  min-height: 680px;
+  background-image: url('/AUVD impact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 8, 18, 0.58);
+}
+
+.impact-hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .impact-hero h1 {
   font-size: 48px;
-  color: var(--text-h);
+  color: #ffffff;
   margin-bottom: 15px;
+ 
 }
 
 .impact-hero .subtitle {
   font-size: 20px;
-  color: var(--text);
-  opacity: 0.85;
+  color: #ffffff;
   max-width: 700px;
   margin: 0 auto;
+ 
 }
 
 .impact-metrics,
+.core-programs,
 .impact-vision,
 .stories-section,
 .programs-overview,
@@ -46,21 +66,84 @@
 .program-overview {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
   padding: 25px;
+  text-align: center;
 }
 
 .metric-number {
   font-size: 34px;
   font-weight: 700;
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+
+.metric-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 8px;
 }
 
 .metric-description {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--text);
+  opacity: 0.85;
+}
+
+.core-programs h2 {
+  font-size: 48px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  color: var(--text-h);
+  text-align: center;
+}
+
+.core-programs h2::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: var(--accent);
+  margin: 14px auto 50px;
+}
+
+.core-programs-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.core-programs-table th,
+.core-programs-table td {
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.core-programs-table th {
+  padding: 12px 16px;
+  background: var(--bg);
+  border-bottom: 2px solid var(--accent);
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.core-programs-table td {
+  padding: 10px 16px;
+  color: var(--text);  
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.core-programs-table tbody tr:nth-child(even) td {
+  background: rgba(170, 59, 255, 0.04);
 }
 
 .stories-grid,
@@ -70,6 +153,10 @@
   gap: 24px;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.story-card {
+  text-align: left;
 }
 
 .story-quote {
@@ -97,12 +184,83 @@
   opacity: 0.85;
 }
 
+.program-overview {
+  text-align: left;
+}
+
+.program-overview-orange {
+  background: #ea580c;
+}
+
+.program-overview-purple {
+  background: #9333ea;
+}
+
+.program-overview-skyblue {
+  background: #0ea5e9;
+}
+
+.program-overview-orange h3,
+.program-overview-orange p,
+.program-overview-purple h3,
+.program-overview-purple p,
+.program-overview-skyblue h3,
+.program-overview-skyblue p {
+  color: #ffffff;
+}
+
+.impact-vision-bordered {
+  position: relative;
+  padding: 50px 40px;
+}
+
+.impact-vision-border-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.impact-vision-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .impact-vision-bordered {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-vision-bordered {
+    padding: 30px 16px;
+  }
+
+  .impact-vision-border-svg path {
+    stroke-width: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-vision-bordered {
+    padding: 24px 14px;
+  }
+}
+
 .impact-vision h2,
 .stories-section h2,
 .programs-overview h2,
 .impact-cta h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: var(--text-h);
+  color: white;
+
+}
+.impact-vision h2 {
   color: var(--text-h);
 }
 
@@ -113,6 +271,71 @@
   color: var(--text);
   opacity: 0.85;
   margin-bottom: 14px;
+    color: white;
+}
+
+.impact-vision p {
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.impact-cta {
+  background: #ea580c;
+}
+
+.impact-cta p {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.impact-cta .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 2px solid #ffffff;
+  border-radius: 0;
+  background: #ffffff;
+  color: #ea580c;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.impact-cta .btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.impact-cta .btn:hover,
+.impact-cta .btn:focus,
+.impact-cta .btn:active {
+  background: #ffffff;
+  color: #ea580c;
+  border-color: #ffffff;
+  border-radius: 0;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.impact-cta .btn-secondary:hover,
+.impact-cta .btn-secondary:focus,
+.impact-cta .btn-secondary:active {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+  border-radius: 0;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .cta-buttons {
@@ -123,7 +346,19 @@
   margin-top: 24px;
 }
 
+@media (max-width: 1024px) {
+  .impact-hero {
+    min-height: 600px;
+    background-position: center 15%;
+  }
+}
+
 @media (max-width: 768px) {
+  .impact-hero {
+    min-height: 520px;
+    background-position: center top;
+  }
+
   .metrics-grid,
   .stories-grid,
   .programs-list {

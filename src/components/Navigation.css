@@ -79,13 +79,13 @@
   padding: 10px 16px;
   display: block;
  
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 600;
   transition: all 0.3s ease;
   cursor: pointer;
   background: transparent;
   border: 0;
-  font-family: inherit;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   text-align: left;
 }
 

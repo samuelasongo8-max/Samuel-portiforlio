@@ -139,20 +139,31 @@ export default function Creative() {
       <section className="exhibitions">
         <div className="container-sm">
           <h2>Exhibitions & Recognition</h2>
-          <div className="exhibitions-list">
-            <div className="exhibition-item">
-              <h3>Community Gallery Exhibitions</h3>
-              <p>Regular exhibitions in Kakuma community spaces and regional venues, featuring both solo and group shows.</p>
-            </div>
-            <div className="exhibition-item">
-              <h3>Social Impact Campaigns</h3>
-              <p>Artwork featured in campaigns promoting education, health, and social awareness in refugee and vulnerable communities.</p>
-            </div>
-            <div className="exhibition-item">
-              <h3>Collaborative Projects</h3>
-              <p>Participation in international artistic collaborations connecting African and diaspora artists.</p>
-            </div>
-          </div>
+          <table className="exhibitions-list">
+            <thead>
+              <tr><th scope="col">Exhibitions & Recognition</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <h3>Community Gallery Exhibitions</h3>
+                  <p>Regular exhibitions in Kakuma community spaces and regional venues, featuring both solo and group shows.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>Social Impact Campaigns</h3>
+                  <p>Artwork featured in campaigns promoting education, health, and social awareness in refugee and vulnerable communities.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <h3>Collaborative Projects</h3>
+                  <p>Participation in international artistic collaborations connecting African and diaspora artists.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

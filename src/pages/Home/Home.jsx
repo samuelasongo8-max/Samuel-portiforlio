@@ -76,6 +76,39 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const workItems = [
+    {
+      label: 'CREATIVE | ARTS',
+      title: 'Creative Arts',
+      description: 'Visual storytelling through painting, drawing, and contemporary art that explores identity and community.',
+      linkText: 'Explore Creative Work',
+      linkUrl: '/creative',
+      color: 'blue'
+    },
+    {
+      label: 'MUSIC | EDUCATION',
+      title: 'Music Education',
+      description: 'Educating 150+ students across 4 classes weekly with 11 instructors and 120+ instruments in Kakuma.',
+      linkText: 'Music Programs',
+      linkUrl: '/music'
+    },
+    {
+      label: 'WEB | DEVELOPMENT',
+      title: 'Web Development',
+      description: 'Full-stack developer building responsive, accessible applications using modern frameworks and tools.',
+      linkText: 'Tech Stack',
+      linkUrl: '/development'
+    },
+    {
+      label: 'SOCIAL | IMPACT',
+      title: 'Social Impact',
+      description: 'Leading AUVD to create sustainable change through community-centered arts, music, and technology programs.',
+      linkText: 'Impact Stories',
+      linkUrl: '/impact',
+      color: 'orange'
+    }
+  ];
+
   return (
     <div className="home-page" ref={rootRef}>
       {/* Hero Section */}
@@ -88,7 +121,8 @@ export default function Home() {
                 Creating through art. Educating through music. Building through technology.
               </p>
               <p className="hero-description">
-                Artist | Music Educator | Full-Stack Developer | CEO of AUVD | TSF Ambassador
+                Artist | Music Educator | Full-Stack Developer | Founder & CEO of Art and Unity for Vulnerable Development (AUVD) | Transylvanian Symphony Foundation (TSF)  Ambassador
+                Representing TSF in Kakuma Refugee Camp, Kenya
               </p>
               <p className="hero-bio">
                 I'm a multi-disciplinary creator and social impact leader based in Kakuma Refugee Camp, dedicated to empowering vulnerable communities through art, music education, and technology innovation.
@@ -114,57 +148,17 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">My Work</h2>
           <div className="areas-grid">
-            <div className="area-card">
-              <div className="area-icon"></div>
-              <p className="area-label">CREATIVE&nbsp;&nbsp;|&nbsp;&nbsp;ARTS</p>
-              <h3>Creative Arts</h3>
-              <p className="area-desc">
-                Visual storytelling through painting, drawing, and contemporary art
-                that explores identity and community.
-              </p>
-              <Link to="/creative" className="area-link">
-                Explore Creative Work <span aria-hidden="true">›</span>
-              </Link>
-            </div>
-
-            <div className="area-card">
-              <div className="area-icon"></div>
-              <p className="area-label">MUSIC&nbsp;&nbsp;|&nbsp;&nbsp;EDUCATION</p>
-              <h3>Music Education</h3>
-              <p className="area-desc">
-                Educating 150+ students across 4 classes weekly with 11 instructors
-                and 120+ instruments in Kakuma.
-              </p>
-              <Link to="/music" className="area-link">
-                Music Programs <span aria-hidden="true">›</span>
-              </Link>
-            </div>
-
-            <div className="area-card">
-              <div className="area-icon"></div>
-              <p className="area-label">WEB&nbsp;&nbsp;|&nbsp;&nbsp;DEVELOPMENT</p>
-              <h3>Web Development</h3>
-              <p className="area-desc">
-                Full-stack developer building responsive, accessible applications
-                using modern frameworks and tools.
-              </p>
-              <Link to="/development" className="area-link">
-                Tech Stack <span aria-hidden="true">›</span>
-              </Link>
-            </div>
-
-            <div className="area-card">
-              <div className="area-icon"></div>
-              <p className="area-label">SOCIAL&nbsp;&nbsp;|&nbsp;&nbsp;IMPACT</p>
-              <h3>Social Impact</h3>
-              <p className="area-desc">
-                Leading AUVD to create sustainable change through community-centered
-                arts, music, and technology programs.
-              </p>
-              <Link to="/impact" className="area-link">
-                Impact Stories <span aria-hidden="true">›</span>
-              </Link>
-            </div>
+            {workItems.map((item) => (
+              <div key={item.title} className={`area-card work-card ${item.color ? `work-card-${item.color}` : ''}`}>
+                <div className="area-icon"></div>
+                <p className="area-label">{item.label}</p>
+                <h3>{item.title}</h3>
+                <p className="area-desc">{item.description}</p>
+                <Link to={item.linkUrl} className="area-link">
+                  {item.linkText} <span aria-hidden="true">›</span>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>

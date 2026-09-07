@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import OptimizedImage from '../../components/OptimizedImage';
 import { setPageMeta } from '../../utils/seo';
 import './Music.css';
 
@@ -65,11 +64,6 @@ export default function Music() {
 
   return (
     <div className="music-page">
-      <section className="music-hero-image">
-        <div className="container">
-          <OptimizedImage src="/Samuel Asongo as a Music Teacter, and Artist.jpg" alt="Samuel Asongo teaching music and performing as an artist" width="1200" height="700" />
-        </div>
-      </section>
       {/* Hero Section */}
       <section className="music-hero">
         <div className="container">
@@ -114,7 +108,7 @@ export default function Music() {
           <div className="programs-grid">
             {programs.map((program, index) => (
               <div key={index} className="program-card">
-                <h3>🎵 {program.name}</h3>
+                <h3>{program.name}</h3>
                 <p>{program.description}</p>
               </div>
             ))}
@@ -132,7 +126,7 @@ export default function Music() {
           <div className="instruments-grid">
             {instruments.map((instrument, index) => (
               <div key={index} className="instrument-item">
-                🎶 {instrument}
+                {instrument}
               </div>
             ))}
           </div>
@@ -145,25 +139,25 @@ export default function Music() {
           <h2>Teaching Philosophy</h2>
           <div className="philosophy-content">
             <div className="philosophy-card">
-              <h3>🎯 Student-Centered</h3>
+              <h3>Student-Centered</h3>
               <p>
                 Each student is unique. We tailor instruction to individual learning styles, pace, and goals.
               </p>
             </div>
             <div className="philosophy-card">
-              <h3>🌍 Culturally Inclusive</h3>
+              <h3>Culturally Inclusive</h3>
               <p>
                 We honor both Western classical traditions and local musical heritage, creating bridges between cultures.
               </p>
             </div>
             <div className="philosophy-card">
-              <h3>🚀 Performance-Oriented</h3>
+              <h3>Performance-Oriented</h3>
               <p>
                 Students are encouraged to perform publicly, building confidence and sharing their talents with the community.
               </p>
             </div>
             <div className="philosophy-card">
-              <h3>👥 Community Focused</h3>
+              <h3>Community Focused</h3>
               <p>
                 Music brings people together. We emphasize ensemble playing and collaborative learning experiences.
               </p>

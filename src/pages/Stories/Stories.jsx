@@ -65,7 +65,7 @@ export default function Stories() {
         <div className="container-sm text-center">
           <h2>Stay Connected</h2>
           <p>Follow the journey, join the conversation, and discover more stories from the work behind the mission.</p>
-          <Link to="/contact" className="btn">Get In Touch</Link>
+          <Link to="/contact"className="btn-auvd">Get In Touch</Link>
         </div>
       </section>
     </div>

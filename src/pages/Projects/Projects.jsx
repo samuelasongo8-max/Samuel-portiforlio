@@ -4,6 +4,7 @@ import './Projects.css';
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [heroBackground, setHeroBackground] = useState(0);
   
   useEffect(() => {
     setPageMeta(
@@ -15,80 +16,98 @@ export default function Projects() {
     );
   }, []);
 
+  useEffect(() => {
+    const backgroundInterval = setInterval(() => {
+      setHeroBackground((currentBackground) => (currentBackground + 1) % 4);
+    }, 5000);
+
+    return () => clearInterval(backgroundInterval);
+  }, []);
+
   const projects = [
-    {
-      id: 1,
-      title: 'AUVD Community Platform',
-      category: 'technology',
-      description: 'Web platform for coordinating community programs across Kakuma Refugee Camp.',
-      tech: ['React', 'Node.js', 'MongoDB'],
-      outcome: 'Increased program coordination efficiency by 40%'
-    },
-    {
-      id: 2,
-      title: 'Music Education Portal',
-      category: 'technology',
-      description: 'Learning management system for music students with lesson materials and progress tracking.',
-      tech: ['React', 'Express', 'PostgreSQL'],
-      outcome: 'Serving 150+ students with digital resources'
-    },
-    {
-      id: 3,
-      title: 'Community Arts Exhibition',
-      category: 'creative',
-      description: 'Curated exhibition featuring works by 50+ artists from Kakuma community.',
-      tech: ['Curation', 'Digital Documentation'],
-      outcome: 'Reached 2000+ community members and international audience'
-    },
-    {
-      id: 4,
-      title: 'Refugee Support Network',
-      category: 'community',
-      description: 'Mobile-friendly support network connecting resources and mentors with vulnerable youth.',
-      tech: ['React', 'Firebase', 'Tailwind CSS'],
-      outcome: 'Connected 500+ youth with mentorship and resources'
-    },
-    {
-      id: 5,
-      title: 'Music Festival Organization',
-      category: 'creative',
-      description: 'Annual community music festival featuring student performances and international artists.',
-      tech: ['Event Planning', 'Community Coordination'],
-      outcome: 'Annual celebration with 1000+ attendees'
-    },
-    {
-      id: 6,
-      title: 'Nonprofit Dashboard',
-      category: 'technology',
-      description: 'Analytics dashboard for nonprofit organizations to track program impact and outcomes.',
-      tech: ['React', 'D3.js', 'API Integration'],
-      outcome: 'Helping 5+ organizations track impact metrics'
-    },
-    {
-      id: 7,
-      title: 'Artist Collective Website',
-      category: 'creative',
-      description: 'Digital portfolio and marketplace for emerging artists in underserved communities.',
-      tech: ['Next.js', 'Stripe', 'Supabase'],
-      outcome: 'Supporting 30+ artists in selling their work online'
-    },
-    {
-      id: 8,
-      title: 'Women Empowerment Initiative',
-      category: 'community',
-      description: 'Program combining skills training, mentorship, and microfinance for women in Kakuma.',
-      tech: ['Program Design', 'Partnership Coordination'],
-      outcome: 'Empowering 200+ women with economic opportunities'
-    },
-    {
-      id: 9,
-      title: 'Youth Leadership Program',
-      category: 'community',
-      description: 'Comprehensive leadership development program for youth aged 15-25 in refugee settings.',
-      tech: ['Curriculum Design', 'Mentorship'],
-      outcome: '100+ youth trained with 80% employment placement'
-    }
-  ];
+   
+  {
+    id: 1,
+    status: 'upcoming',
+    title: 'AUVD Community Platform',
+    category: 'technology',
+    description: 'Web platform in development for coordinating community programs across Kakuma Refugee Camp.',
+    tech: ['React', 'Node.js', 'MongoDB'],
+    outcome: 'Currently in development - goal is to improve program coordination efficiency'
+  },
+  {
+    id: 2,
+    status: 'completed',
+    title: 'Music Education Portal',
+    category: 'technology',
+    description: 'Learning management system for music students with lesson materials and progress tracking, live at AUVD.',
+    tech: ['React', 'Express', 'PostgreSQL'],
+    outcome: 'Serving 150+ students with digital resources'
+  },
+  {
+    id: 3,
+    status: 'upcoming',
+    title: 'Community Arts Exhibition',
+    category: 'creative',
+    description: 'Planned curated exhibition to feature works by artists from the Kakuma community.',
+    tech: ['Curation', 'Digital Documentation'],
+    outcome: 'In planning- targeting a launch to reach the community and a wider audience'
+  },
+  {
+    id: 4,
+    status: 'upcoming',
+    title: 'Refugee Support Network',
+    category: 'community',
+    description: 'Mobile-friendly support network in development to connect resources and mentors with vulnerable youth.',
+    tech: ['React', 'Firebase', 'Tailwind CSS'],
+    outcome: 'Currently in development'
+  },
+  {
+    id: 5,
+    status: 'upcoming',
+    title: 'Music Festival Organization',
+    category: 'creative',
+    description: 'Community music festival concept in planning at AUVD, featuring student performances and guest artists.',
+    tech: ['Event Planning', 'Community Coordination'],
+    outcome: 'In planning by AUVD-no date confirmed yet'
+  },
+  {
+    id: 6,
+    status: 'upcoming',
+    title: 'Nonprofit Dashboard',
+    category: 'technology',
+    description: 'Analytics dashboard I\'m building as a developer to help nonprofit organizations track program impact and outcomes.',
+    tech: ['React', 'D3.js', 'API Integration'],
+    outcome: 'In development'
+  },
+  {
+    id: 7,
+    status: 'upcoming',
+    title: 'Artist Collective Website',
+    category: 'creative',
+    description: 'Digital portfolio and marketplace I\'m building as a developer for emerging artists in underserved communities.',
+    tech: ['Next.js', 'Stripe', 'Supabase'],
+    outcome: 'In development'
+  },
+  {
+    id: 8,
+    status: 'completed',
+    title: 'Women Empowerment Initiative',
+    category: 'community',
+    description: 'Program combining skills training, mentorship, and microfinance for women in Kakuma, run by AUVD.',
+    tech: ['Program Design', 'Partnership Coordination'],
+    outcome: 'Empowering 200+ women with economic opportunities'
+  },
+  {
+    id: 9,
+    status: 'completed',
+    title: 'Youth Leadership Program',
+    category: 'community',
+    description: 'Comprehensive leadership development program for youth aged 15-25 in refugee settings.',
+    tech: ['Curriculum Design', 'Mentorship'],
+    outcome: '100+ youth trained with 80% employment placement'
+  }
+];
 
   const categories = [
     { value: 'all', label: 'All Projects' },
@@ -105,6 +124,22 @@ export default function Projects() {
     <div className="projects-page">
       {/* Hero Section */}
       <section className="projects-hero">
+        <div
+          className={`projects-hero-background projects-hero-background-one${heroBackground === 0 ? ' projects-hero-background-active' : ''}`}
+          aria-hidden="true"
+        />
+        <div
+          className={`projects-hero-background projects-hero-background-two${heroBackground === 1 ? ' projects-hero-background-active' : ''}`}
+          aria-hidden="true"
+        />
+        <div
+          className={`projects-hero-background projects-hero-background-three${heroBackground === 2 ? ' projects-hero-background-active' : ''}`}
+          aria-hidden="true"
+        />
+        <div
+          className={`projects-hero-background projects-hero-background-four${heroBackground === 3 ? ' projects-hero-background-active' : ''}`}
+          aria-hidden="true"
+        />
         <div className="container">
           <h1>Projects Portfolio</h1>
           <p className="subtitle">
@@ -191,7 +226,7 @@ export default function Projects() {
           <p>
             I'm interested in projects that create meaningful social impact. If you have a vision that aligns with my values and expertise, let's talk.
           </p>
-          <a href="/contact" className="btn">
+          <a href="/contact" className="btn-auvd">
             Propose a Project
           </a>
         </div>

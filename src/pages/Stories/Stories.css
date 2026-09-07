@@ -8,8 +8,7 @@
 
 .stories-hero {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.05) 0%, transparent 100%);
-  text-align: center;
+   
   border-bottom: 1px solid var(--border);
 }
 
@@ -51,7 +50,7 @@
 
 .story-card:hover {
   border-color: var(--accent);
-  box-shadow: 0 10px 30px rgba(170, 59, 255, 0.1);
+ 
   transform: translateY(-5px);
 }
 
@@ -87,7 +86,7 @@
 
 .stories-cta {
   padding: 80px 20px;
-  background: linear-gradient(135deg, rgba(170, 59, 255, 0.03) 0%, transparent 100%);
+  
 }
 
 .stories-cta h2 {
