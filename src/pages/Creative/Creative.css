@@ -1,0 +1,409 @@
+/* Creative Page Styles */
+
+.creative-page {
+  width: 100%;
+}
+
+/* Hero Section */
+.creative-hero {
+  padding: 80px 20px;
+  min-height: 680px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.creative-hero picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.creative-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+.creative-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(12, 8, 18, 0.58);
+}
+
+.creative-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.creative-hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
+
+.creative-hero .subtitle {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Artist Statement */
+.artist-statement {
+  padding: 80px 20px;
+}
+
+.artist-statement h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: var(--text-h);
+}
+
+.artist-statement p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.artist-statement p:last-child {
+  margin-bottom: 0;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 80px 20px;
+}
+
+.gallery h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.artwork-placeholder {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.artwork-info {
+  padding: 25px;
+}
+
+.artwork-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--text-h);
+}
+
+.artwork-info .category {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.artwork-info .description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+/* Techniques Section */
+.techniques {
+  padding: 80px 20px;
+}
+
+.techniques h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--text-h);
+}
+
+.techniques-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.technique-card {
+  padding: 40px 30px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.technique-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-5px);
+}
+
+.technique-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--text-h);
+}
+
+.technique-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Exhibitions Section */
+.exhibitions {
+  padding: 80px 20px;
+}
+
+.exhibitions h2 {
+  font-size: 48px;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  text-align: center;
+  color: var(--text-h);
+}
+
+.exhibitions-list {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.exhibitions h2::after {
+  content: '';
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: var(--accent);
+  margin: 14px auto 50px;
+}
+
+.exhibitions-list th,
+.exhibitions-list td {
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.exhibitions-list th {
+  padding: 12px 16px;
+  background: var(--bg);
+  border-bottom: 2px solid var(--accent);
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.exhibitions-list td {
+  padding: 10px 16px;
+  color: var(--text);
+}
+
+.exhibitions-list tbody tr:nth-child(even) td {
+  background: rgba(170, 59, 255, 0.04);
+}
+
+.exhibitions-list h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--text-h);
+}
+
+.exhibitions-list p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Commissions Section */
+.commissions {
+  padding: 100px 20px;
+}
+
+.commissions h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--text-h);
+}
+
+.commissions p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.commissions p:last-child {
+  margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .creative-hero {
+    min-height: 600px;
+    background-position: center 30%;
+  }
+
+  .gallery-grid,
+  .techniques-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .creative-hero {
+    min-height: 520px;
+    background-position: center 22%;
+  }
+
+  .creative-hero h1 {
+    font-size: 36px;
+  }
+
+  .artist-statement h2,
+  .gallery h2,
+  .techniques h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .gallery-grid,
+  .techniques-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .commissions {
+    padding: 60px 20px;
+  }
+
+  .commissions h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .creative-hero {
+    padding: 50px 15px;
+    min-height: 480px;
+    background-position: center top;
+  }
+
+  .creative-hero h1 {
+    font-size: 28px;
+  }
+
+  .creative-hero .subtitle {
+    font-size: 16px;
+  }
+
+  .artist-statement,
+  .gallery,
+  .techniques {
+    padding: 60px 15px;
+  }
+
+  .artist-statement h2,
+  .gallery h2,
+  .techniques h2,
+  .exhibitions h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .gallery-item,
+  .technique-card {
+    padding: 20px;
+  }
+
+  .artwork-placeholder {
+    font-size: 36px;
+  }
+
+  .exhibition-item {
+    padding: 15px 20px;
+    border-left-width: 3px;
+  }
+
+  .commissions h2 {
+    font-size: 24px;
+  }
+}
+
+/* Add this at the end of the file */
+
+/* Submit/action button — always visible, no hover/focus/active changes */
+.commissions .btn-auvd {
+  display: inline-block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--accent) !important;
+  width: auto;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.commissions .btn-auvd:hover,
+.commissions .btn-auvd:focus,
+.commissions .btn-auvd:active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}

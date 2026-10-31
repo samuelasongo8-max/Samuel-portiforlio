@@ -1,0 +1,132 @@
+/* AUVD Page Styles */
+
+.auvd-page {
+  width: 100%;
+}
+
+.auvd-hero {
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.auvd-hero-background {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.auvd-hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auvd-hero-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 8, 18, 0.58);
+}
+
+.auvd-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.auvd-hero h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.auvd-hero .subtitle,
+.auvd-hero .tagline {
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto 12px;
+}
+
+.auvd-mission,
+.auvd-focus-areas,
+.auvd-values,
+.auvd-get-involved {
+  padding: 80px 20px;
+}
+
+.focus-grid,
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.focus-card,
+.value-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 25px;
+}
+
+.focus-card h3,
+.value-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--text-h);
+}
+
+.focus-card p,
+.value-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+/* Action button — always visible, no hover/focus/active changes,
+   sized to content (not full-width) */
+.auvd-get-involved .btn-auvd {
+  display: inline-block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--accent) !important;
+  width: auto;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.auvd-get-involved .btn-auvd:hover,
+.auvd-get-involved .btn-auvd:focus,
+.auvd-get-involved .btn-auvd:active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 768px) {
+  .auvd-hero h1 {
+    font-size: 36px;
+  }
+
+  .focus-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

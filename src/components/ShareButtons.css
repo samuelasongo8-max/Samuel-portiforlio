@@ -1,0 +1,16 @@
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 16px;
+  margin: 28px auto;
+}
+
+.share-buttons a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent);
+  text-underline-offset: 3px;
+}

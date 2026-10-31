@@ -1,0 +1,59 @@
+{
+  "rewrites": [
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/creative", "destination": "/creative/index.html" },
+    { "source": "/music", "destination": "/music/index.html" },
+    { "source": "/development", "destination": "/development/index.html" },
+    { "source": "/projects", "destination": "/projects/index.html" },
+    { "source": "/impact", "destination": "/impact/index.html" },
+    { "source": "/auvd", "destination": "/auvd/index.html" },
+    { "source": "/ambassador", "destination": "/ambassador/index.html" },
+    { "source": "/experience", "destination": "/experience/index.html" },
+    { "source": "/stories", "destination": "/stories/index.html" },
+    { "source": "/news", "destination": "/news/index.html" },
+    { "source": "/news/samuel-asongo-teaching-music-kakuma", "destination": "/news/samuel-asongo-teaching-music-kakuma/index.html" },
+    { "source": "/news/art-changes-lives-kakuma-kenya", "destination": "/news/art-changes-lives-kakuma-kenya/index.html" },
+    { "source": "/news/african-music-education-samuel-asongo", "destination": "/news/african-music-education-samuel-asongo/index.html" },
+    { "source": "/contact", "destination": "/contact/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), geolocation=(), microphone=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://www.googletagmanager.com; style-src 'self'; img-src 'self' https: data:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net; frame-src https://www.googletagmanager.com; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+/* Experience Page Styles */
+
+.experience-page {
+  width: 100%;
+}
+
+.experience-hero {
+  padding: 80px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background-color: #175ce7;
+}
+
+.experience-hero h1 {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.experience-hero .subtitle {
+  font-size: 20px;
+  color: #ffffff;
+  opacity: 0.85;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.experience-list {
+  padding: 80px 20px;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.timeline-marker {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, #c084fc 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.timeline-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 25px 30px;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.15);
+  transform: translateY(-3px);
+}
+
+.timeline-card h3 {
+  font-size: 20px;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.timeline-period {
+  font-size: 13px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.timeline-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.experience-cta {
+  padding: 80px 20px;
+  background-color: #175ce7;
+}
+
+.experience-cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.experience-cta p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: white;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* Action button — always visible, no hover/focus/active changes,
+   sized to content (not full-width) */
+.experience-cta .btn-auvd {
+  display: inline-block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--accent) !important;
+  width: auto;
+  padding: 10px 24px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.experience-cta .btn-auvd:hover,
+.experience-cta .btn-auvd:focus,
+.experience-cta .btn-auvd:active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  background: var(--accent) !important;
+  color: #ffffff !important;
+  border-color: var(--accent) !important;
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+@media (max-width: 768px) {
+  .experience-hero h1 {
+    font-size: 36px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-marker {
+    margin-bottom: 5px;
+  }
+}

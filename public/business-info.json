@@ -1,0 +1,17 @@
+{
+  "name": "Art and Unity for Vulnerable Development",
+  "category": "Community organization",
+  "description": "A community organization supporting creative arts, music education, and development programs in Kakuma, Kenya.",
+  "location": {
+    "locality": "Kakuma",
+    "country": "Kenya"
+  },
+  "website": "https://samuel-portiforlio.vercel.app",
+  "phone": null,
+  "hours": "Mo-Fr 08:00-17:00",
+  "services": [
+    "Music education",
+    "Creative arts",
+    "Community development"
+  ]
+}

@@ -1,0 +1,36 @@
+.related-pages {
+  margin: 48px auto;
+  padding: 28px 20px;
+  width: min(100% - 40px, 1120px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--social-bg);
+}
+
+.related-pages h2 {
+  margin: 0 0 16px;
+  color: var(--text-h);
+  font-size: 1.25rem;
+}
+
+.related-pages ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.related-pages a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+.related-pages a:hover {
+  text-decoration-thickness: 2px;
+}
